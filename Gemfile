@@ -27,11 +27,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 group :test, :development do
-  gem 'rspec-rails', '~> 3.0.2'
+  gem 'rspec-rails', '~> 2.14'
 end
 
 group :test do
-  gem 'capybara', '~> 2.4.1'
+  gem 'capybara', '2.1.0'
 end
 
 
