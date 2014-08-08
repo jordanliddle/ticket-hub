@@ -31,7 +31,7 @@ group :test, :development do
 end
 
 group :test do
-  gem 'capybara', '2.1.0'
+  gem 'capybara', git: 'https://github.com/jnicklas/capybara', ref: '7fa75e55420e'
   gem 'factory_girl_rails', '~> 4.2.1'
 end
 
