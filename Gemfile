@@ -33,6 +33,7 @@ end
 group :test do
   gem "capybara", "2.1.0"
   gem 'factory_girl_rails', '~> 4.2.1'
+  gem 'database_cleaner', '~> 1.3.0'
 end
 
 
@@ -47,4 +48,3 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

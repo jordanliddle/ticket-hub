@@ -19,5 +19,9 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </p>  
-  <%= f.submit "Update ticket" %>
+  <% if @ticket.new_record? %>
+    <%= f.submit "Create Ticket" %>
+  <% else %>
+    <%= f.submit "Update Ticket" %>
+  <% end %>
 <% end %>

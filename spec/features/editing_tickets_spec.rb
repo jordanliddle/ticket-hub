@@ -6,14 +6,14 @@ feature "Editing Tickets" do
 
   before do
     visit '/'
-    first(:link, project.name).click
+    click_link project.name
     click_link ticket.title
     click_link "Edit Ticket"
   end
 
   scenario "Updating a ticket" do
     fill_in "Title", with: "Make it really shiny!"
-    click_button "Update ticket"
+    click_button "Update Ticket"
 
     expect(page).to have_content "Ticket has been updated."
 
