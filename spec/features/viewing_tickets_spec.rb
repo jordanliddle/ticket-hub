@@ -4,11 +4,13 @@ feature "viewing tickets" do
   before do
     factory_example = FactoryGirl.create(:project, name: "example2")
 
-    FactoryGirl.create(:ticket, project: factory_example, title: "Make it shiny!", description: "Gradients! Starbursts, Oh my!")
+    user = FactoryGirl.create(:user)
+    ticket = FactoryGirl.create(:ticket,
+            project: factory_example,
+            title: "Make it shiny!",
+            description: "Gradients! Starbursts, Oh my!")
+    ticket.update(user: user) # same as ticket.user = user </br> ticket.save
 
-    internet_explorer = FactoryGirl.create(:project, name: "Internet Explorer")
-
-    FactoryGirl.create(:ticket, project: internet_explorer, title: "Standards compliance", description: "Isn't a joke.")
 
     visit '/'
   end

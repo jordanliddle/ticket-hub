@@ -1,6 +1,7 @@
 class TicketsController < ApplicationController
   before_action :set_project
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
+  before_action :require_signin!, except: [:show, :index]
 
   def new
     @ticket = @project.tickets.build # Same as Ticket.new(project_id: @project.id) The build method simply instantiates a new record for the tickets association on the @project object
@@ -8,6 +9,7 @@ class TicketsController < ApplicationController
 
   def create
     @ticket = @project.tickets.build(ticket_params)
+    @ticket.user = current_user
     if @ticket.save
       flash[:notice] = 'Hey, good news! Your ticket has been created.'
       redirect_to [@project, @ticket] # The route generated would be /projects/1/tickets/2 or something similiar
