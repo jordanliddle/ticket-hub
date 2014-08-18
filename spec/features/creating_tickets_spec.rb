@@ -5,6 +5,7 @@ feature "Creating tickets" do
   before do
     project = FactoryGirl.create(:project)
     user = FactoryGirl.create(:user)
+    @email = user.email
 
     visit '/'
     click_link project.name
@@ -28,7 +29,7 @@ feature "Creating tickets" do
     expect(page).to have_content("Hey, good news! Your ticket has been created.")
 
     within "#ticket #author" do
-      expect(page).to have_content("Created by user@example.com")
+      expect(page).to have_content("Created by #{@email}")
     end
   end
 
