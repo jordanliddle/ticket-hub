@@ -5,7 +5,7 @@ TicketHub is a ticket management system application for project developers. It i
 
 The TicketHub application boasts:
 * **RESTful routing and validations** 
-* **CRUD interface for projects, tickets, users, and admin users ** 
+* **CRUD interface for projects, tickets, users, and admin users** 
 * **Sign Up/Sign In functionality** 
 * **Basic authentication system** 
 * **Fine grain access control** 
