@@ -50,3 +50,5 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'debugger', group: [:development, :test]
 
 gem 'cancan', '~> 1.6.10'
+
+gem 'carrierwave', '0.8.0'
